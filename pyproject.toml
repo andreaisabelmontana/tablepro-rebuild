@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tablepro"
+version = "0.1.0"
+description = "A free, open-source terminal database manager — browse, query, and export SQLite/Postgres/MySQL."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Andrea Montana" }]
+keywords = ["database", "sqlite", "postgres", "mysql", "cli", "tui", "sql"]
+dependencies = [
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+postgres = ["psycopg[binary]>=3.1"]
+mysql = ["PyMySQL>=1.1"]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+tablepro = "tablepro.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tablepro*"]

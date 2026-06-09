@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Test / cache
+.pytest_cache/
+.coverage
+
+# Demo / scratch databases & exports
+*.sqlite
+*.db
+demo.sqlite
+*.csv
+*.tsv
+out.json
+results.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
